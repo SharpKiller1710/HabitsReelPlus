@@ -1,18 +1,67 @@
 ﻿using HabitsReelPlus.Models;
+using HabitsReelPlus.Models.Status;
+using HabitsReelPlus.ViewViewModels.Login.ForgotPassword;
 using MyFirstMobileApp.ViewViewModels.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Windows.Input;
 
 namespace HabitsReelPlus.ViewViewModels.Login
 {
     internal class LoginViewModel : BaseViewModel
     {
+        public ICommand ForgetPasswordClicked { get; }
+        public ICommand LoginButtonClicked { get; }
+
+        private string _username = string.Empty;
+        private string _password = string.Empty;
+
         public LoginViewModel()
         {
             Title = TitleMain.LoginTitle;
+            ForgetPasswordClicked = new Command(forgetPasswordAsync);
+            LoginButtonClicked = new Command(loginButtonClicked);
         }
+
+        public string Username
+        {
+            get
+            {
+                return _username;
+            }
+            set
+            {
+                if (_username != value)
+                {
+                    _username = value;
+                }
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return _password;
+            }
+            set
+            {
+                if (_password != value)
+                {
+                    _password = value;
+                }
+            }
+        }
+
+        public void loginButtonClicked()
+        {
+            LoginStatus.login();
+            Debug.WriteLine("Login Button Clicked");
+        }
+
+        public async void forgetPasswordAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new ForgotPasswordView());
+        }
+
     }
 }
