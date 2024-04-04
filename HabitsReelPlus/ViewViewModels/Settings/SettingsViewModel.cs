@@ -7,7 +7,7 @@ namespace HabitsReelPlus.ViewViewModels.Settings
     {
         public SettingsViewModel() 
         {
-            Title = TitleMain.SettingsTitle;
+            Title = TitleSettings.TitleSetting;
         }
     }
 }

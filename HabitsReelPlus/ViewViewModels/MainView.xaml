@@ -33,6 +33,10 @@
                     Grid.Column="0"
                     Text="{Binding LoginTitle}"
                     Command="{OnLoginClicked}" />
+            <Button Grid.Row="1"
+                    Grid.Column="0"
+                    Text="{Binding SettingTitle}"
+                    Command="{Binding OnSettingClicked}" />
 
 
         </Grid>
