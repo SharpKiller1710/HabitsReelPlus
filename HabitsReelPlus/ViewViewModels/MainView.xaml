@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HabitsReelPlus.ViewViewModels.MainView"
-             Title="MainView">
+             Title="{Binding Title}">
     
     <!-- Applying a "Style" to the button.
          This will provide a space between the buttons -->
@@ -32,7 +32,7 @@
             <Button Grid.Row="0"
                     Grid.Column="0"
                     Text="{Binding LoginTitle}"
-                    Command="{OnLoginClicked}" />
+                    Command="{Binding OnLoginClicked}" />
 
 
         </Grid>
