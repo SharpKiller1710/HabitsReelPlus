@@ -10,5 +10,6 @@ namespace HabitsReelPlus.Models
     {
         public static string LoginTitle { get; set; } = "Login";
         public static string FgtPwd { get; set; } = "Forgot Password";
+        public static string SettingsTitle { get; set; } = "Settings";
     }
 }
