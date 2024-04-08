@@ -2,11 +2,6 @@
 using HabitsReelPlus.ViewViewModels.Login;
 using HabitsReelPlus.ViewViewModels.Settings;
 using MyFirstMobileApp.ViewViewModels.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace HabitsReelPlus.ViewViewModels
