@@ -92,7 +92,7 @@
             <Label
             Grid.Row="1"
             Grid.ColumnSpan="2"
-            Text="$19.99/Month"
+            Text="$19.99qT/Month"
             FontSize="20"
             TextColor="Red"
             VerticalOptions="CenterAndExpand" 
