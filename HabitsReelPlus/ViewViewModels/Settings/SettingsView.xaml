@@ -32,13 +32,14 @@
             <Button Grid.Row="0"
                     Grid.ColumnSpan="2"
                     Text="Change Password"
-                    BackgroundColor="Cyan"
+                    BackgroundColor="#00c1cd"
                     FontSize="20"
                     Command="{Binding OnLoginClicked}" />
             
             <Button Grid.Row="1"
                     Grid.ColumnSpan="2"
                     Text="Change Email"
+                    BackgroundColor="#00c1cd"
                     FontSize="20"
                     Command="{Binding OnSettingClicked}" />
 
@@ -55,12 +56,12 @@
             <Label Text="Dark Mode"
                x:Name="label1"
                FontSize="Large"
-               TextColor="Blue"
+               TextColor="Black"
                FontAttributes="Bold" />
 
             <Switch x:Name="switch1"
                 IsToggled="{Binding Label1}"
-                Toggled="SwitchToggledFirst"
+                
                 OnColor="Gray" />
 
 
