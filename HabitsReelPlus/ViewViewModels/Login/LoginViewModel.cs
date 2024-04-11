@@ -9,16 +9,18 @@ namespace HabitsReelPlus.ViewViewModels.Login
 {
     internal class LoginViewModel : BaseViewModel
     {
-        public ICommand ForgetPasswordClicked { get; }
+        public ICommand OnForgotClicked { get; }
         public ICommand LoginButtonClicked { get; }
 
         private string _username = string.Empty;
         private string _password = string.Empty;
 
+        public string ForgotTitle { get; } = TitleMain.FgtPwd;
+
         public LoginViewModel()
         {
             Title = TitleMain.LoginTitle;
-            ForgetPasswordClicked = new Command(forgetPasswordAsync);
+            OnForgotClicked = new Command(forgetPasswordAsync);
             LoginButtonClicked = new Command(loginButtonClicked);
         }
 
