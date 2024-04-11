@@ -8,8 +8,8 @@ namespace HabitsReelPlus.ViewViewModels
 {
     internal class MainViewModel : BaseViewModel
     {
-        public String LoginTitle { get; } = TitleMain.LoginTitle;
-        public String SettingTitle { get; } = TitleSettings.TitleSetting;
+        public string LoginTitle { get; } = TitleMain.LoginTitle;
+        public string SettingTitle { get; } = TitleSettings.TitleSetting;
 
         public ICommand OnLoginClicked { get; set; }
         public ICommand OnSettingClicked { get; set; }
