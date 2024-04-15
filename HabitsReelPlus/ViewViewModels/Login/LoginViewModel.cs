@@ -14,6 +14,8 @@ namespace HabitsReelPlus.ViewViewModels.Login
 
         private string _username = string.Empty;
         private string _password = string.Empty;
+        private string _entryText = string.Empty;
+
 
         public string ForgotTitle { get; } = TitleMain.FgtPwd;
 
@@ -23,6 +25,7 @@ namespace HabitsReelPlus.ViewViewModels.Login
             OnForgotClicked = new Command(forgetPasswordAsync);
             LoginButtonClicked = new Command(loginButtonClicked);
         }
+
 
         public string Username
         {
@@ -52,6 +55,17 @@ namespace HabitsReelPlus.ViewViewModels.Login
                     _password = value;
                 }
             }
+        }
+
+        private async void OnEntryClickedAsync(object obj)
+        {
+            if (string.IsNullOrEmpty(_entryText.Trim()))
+            {
+                await Application.Current.MainPage.DisplayAlert(TitleMain.UsernameTitle, "Username can't be empty!", "OK");
+                return;
+            }
+
+            await Application.Current.MainPage.Navigation.PushAsync(new LoginView());
         }
 
         public void loginButtonClicked()
