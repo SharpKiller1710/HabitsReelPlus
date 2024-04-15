@@ -1,6 +1,7 @@
 ﻿using HabitsReelPlus.Models;
 using HabitsReelPlus.Models.Status;
 using HabitsReelPlus.ViewViewModels.Login.ForgotPassword;
+using HabitsReelPlus.ViewViewModels.Login.SignUp;
 using MyFirstMobileApp.ViewViewModels.Base;
 using System.Diagnostics;
 using System.Windows.Input;
@@ -11,6 +12,7 @@ namespace HabitsReelPlus.ViewViewModels.Login
     {
         public ICommand OnForgotClicked { get; }
         public ICommand LoginButtonClicked { get; }
+        public ICommand SignUpClicked { get; }
 
         private string _username = string.Empty;
         private string _password = string.Empty;
@@ -18,12 +20,14 @@ namespace HabitsReelPlus.ViewViewModels.Login
 
 
         public string ForgotTitle { get; } = TitleMain.FgtPwd;
+        public string SignUpTitle { get; } = TitleMain.SignUpTitle;
 
         public LoginViewModel()
         {
             Title = TitleMain.LoginTitle;
             OnForgotClicked = new Command(forgetPasswordAsync);
             LoginButtonClicked = new Command(loginButtonClicked);
+            SignUpClicked = new Command(signUpClicked);
         }
 
 
@@ -57,6 +61,7 @@ namespace HabitsReelPlus.ViewViewModels.Login
             }
         }
 
+        
         private async void OnEntryClickedAsync(object obj)
         {
             if (string.IsNullOrEmpty(_entryText.Trim()))
@@ -77,6 +82,11 @@ namespace HabitsReelPlus.ViewViewModels.Login
         public async void forgetPasswordAsync()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new ForgotPasswordView());
+        }
+
+        public async void signUpClicked()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new SignUpView());
         }
 
     }

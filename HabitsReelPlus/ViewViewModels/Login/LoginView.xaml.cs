@@ -11,7 +11,7 @@ public partial class LoginView : ContentPage
 
     public static string Text { get; private set; }
 
-    private void OnSubmitClicked(object sender, EventArgs e)
+    private void OnLoginClicked(object sender, EventArgs e)
     {
         string entryText = LoginView.Text;
 
