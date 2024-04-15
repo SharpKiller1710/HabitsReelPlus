@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HabitsReelPlus.ViewViewModels.Settings.PaymentMethod.PaymentMethodView"
+             Title="PaymentMethodView">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="Center">
+
+        <Entry x:Name="UsernameValue"
+            Placeholder="Username"
+            PlaceholderColor="White"
+            Text="{Binding EntryText}"
+            TextColor="Red"
+            WidthRequest="300"
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="PasswordValue"
+            Placeholder="Password"
+            PlaceholderColor="White"
+            Text="{Binding EntryText}"
+            TextColor="Red"
+            WidthRequest="300"
+            HorizontalOptions="Center" />
+
+        <BoxView HeightRequest="3"
+              BackgroundColor="White"
+              WidthRequest="300" />
+
+        <Button Text="Sign In"
+             HorizontalOptions="Center"
+             FontAttributes="Bold,Italic"
+             Margin="10"
+             TextColor="White"
+             BorderWidth="2"
+             BorderColor="Black"
+             BackgroundColor="Blue"
+             Command="{Binding OnEntryClicked}" />
+
+        <!-- Sets Margin Left, Top, Right, Bottom -->
+        <Grid Margin="25, 35, 20, 20">
+
+            <Grid.RowDefinitions>
+                <!-- Set Height to 50 DIPs (device-independent pixels) -->
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <!-- Set Column to * which will proportionately space out the columns -->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0"
+                 Grid.ColumnSpan="2"
+                 Text="{Binding ForgotTitle}"
+                 Command="{Binding OnForgotClicked}" />
+
+
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

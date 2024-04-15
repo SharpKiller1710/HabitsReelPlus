@@ -9,5 +9,7 @@ namespace HabitsReelPlus.Models
     internal class TitleSettings
     {
         public static string TitleSetting { get; set; } = "Settings";
+
+        public static string TitlePaymentMethod { get; set; } = "Payment Method";
     }
 }
