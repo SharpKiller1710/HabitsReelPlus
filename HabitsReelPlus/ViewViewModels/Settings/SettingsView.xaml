@@ -87,7 +87,7 @@
             Text="No Ads"
             FontSize="20"
             BackgroundColor="Red"
-            Command="{Binding OnLoginClicked}" />
+            Command="{Binding OnPaymentClicked}"/>
 
             <Label
             Grid.Row="1"
