@@ -22,6 +22,7 @@
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -42,7 +43,6 @@
                     Grid.ColumnSpan="2"
                     Text="{Binding WorkoutTitle}"
                     Command="{Binding OnWorkoutClicked}" />
-
 
         </Grid>
 
