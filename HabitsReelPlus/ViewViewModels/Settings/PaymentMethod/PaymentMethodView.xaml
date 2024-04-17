@@ -12,17 +12,33 @@
 
     <StackLayout VerticalOptions="Center">
 
-        <Entry x:Name="UsernameValue"
-            Placeholder="Username"
-            PlaceholderColor="White"
+        <Entry x:Name="HolderValue"
+            Placeholder="Card Holder"
+            PlaceholderColor="Gray"
             Text="{Binding EntryText}"
             TextColor="Red"
             WidthRequest="300"
             HorizontalOptions="Center" />
 
-        <Entry x:Name="PasswordValue"
-            Placeholder="Password"
-            PlaceholderColor="White"
+        <Entry x:Name="CardValue"
+            Placeholder="Card Number"
+            PlaceholderColor="Gray"
+            Text="{Binding EntryText}"
+            TextColor="Red"
+            WidthRequest="300"
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="SecurityValue"
+            Placeholder="CVV"
+            PlaceholderColor="Gray"
+            Text="{Binding EntryText}"
+            TextColor="Red"
+            WidthRequest="300"
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="ExpirationValue"
+            Placeholder="Expiry"
+            PlaceholderColor="Gray"
             Text="{Binding EntryText}"
             TextColor="Red"
             WidthRequest="300"
@@ -32,11 +48,11 @@
               BackgroundColor="White"
               WidthRequest="300" />
 
-        <Button Text="Sign In"
+        <Button Text="Confirm Payment"
              HorizontalOptions="Center"
              FontAttributes="Bold,Italic"
              Margin="10"
-             TextColor="White"
+             TextColor="Gray"
              BorderWidth="2"
              BorderColor="Black"
              BackgroundColor="Blue"
@@ -57,11 +73,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0"
-                 Grid.ColumnSpan="2"
-                 Text="{Binding ForgotTitle}"
-                 Command="{Binding OnForgotClicked}" />
-
+            
 
         </Grid>
 
