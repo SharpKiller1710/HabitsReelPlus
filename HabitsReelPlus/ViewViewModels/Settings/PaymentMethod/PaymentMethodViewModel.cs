@@ -14,6 +14,12 @@ namespace HabitsReelPlus.ViewViewModels.Settings.PaymentMethod
         private string _expiry = string.Empty;
         private string _entryText = string.Empty;
 
+        public PaymentMethodViewModel()
+        {
+            Title = TitleSettings.TitlePaymentMethod;
+            
+        }
+
 
         public string SettingsTitle { get; } = TitleSettings.TitlePaymentMethod;
 
