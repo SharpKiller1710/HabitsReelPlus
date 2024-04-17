@@ -44,7 +44,6 @@
                     Text="{Binding WorkoutTitle}"
                     Command="{Binding OnWorkoutClicked}" />
 
-
         </Grid>
 
     </VerticalStackLayout>
