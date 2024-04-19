@@ -1,4 +1,7 @@
 using HabitsReelPlus.Models;
+using HabitsReelPlus.ViewViewModels.SplashPage;
+using System.Security.Cryptography.X509Certificates;
+using System.Windows.Input;
 
 namespace HabitsReelPlus.ViewViewModels.Login;
 public partial class LoginView : ContentPage
@@ -9,11 +12,14 @@ public partial class LoginView : ContentPage
         BindingContext = new LoginViewModel();
     }
 
+    public ICommand OnLoginClicked { get; }
+
     public static string Text { get; private set; }
 
-    private void OnLoginClicked(object sender, EventArgs e)
+    public async void OnLoginClickedAsync(object sender, EventArgs e)
     {
-        string entryText = LoginView.Text;
+        string entryText = UsernameValue.Text;
+        string passText = PasswordValue.Text;
 
         if (string.IsNullOrEmpty(entryText))
         {
@@ -25,5 +31,14 @@ public partial class LoginView : ContentPage
             //Entry is not empty, notify the user of what they typed
             Application.Current.MainPage.DisplayAlert(TitleMain.UsernameTitle, "You entered:" + entryText, "OK");
         }
+
+        if (entryText == "DieGuy")
+        {
+            if (passText == "DeadGuy1991")
+            {
+                await Application.Current.MainPage.Navigation.PushAsync(new SplashPageView());
+            }
+        }
+
     }
 }

@@ -17,6 +17,14 @@ namespace HabitsReelPlus.ViewViewModels
         public ICommand OnSettingClicked { get; set; }
         public ICommand OnWorkoutClicked { get; set; }
 
+        public ImageSource GetImageSource
+        {
+            get
+            {
+                return ImageSource.FromFile("Images/logoclear.jpg");
+            }
+        }
+
         public MainViewModel() 
         {
             Title = TitleMain.MainTitle;

@@ -14,6 +14,15 @@
 
     <VerticalStackLayout>
 
+        <BoxView HeightRequest="50"
+                 Color="White"/>
+
+        <Image Source="{Binding GetImageSource}"
+               Aspect="AspectFit" />
+
+        <BoxView HeightRequest="300"
+                 Color="White"/>
+
         <!-- Sets Margin Left, Top, Right, Bottom -->
         <Grid Margin="25, 35, 20, 20">
 
@@ -24,6 +33,7 @@
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
             </Grid.RowDefinitions>
+            
 
             <Grid.ColumnDefinitions>
                 <!-- Set Column to * which will proportionately space out the columns -->
@@ -34,15 +44,14 @@
             <Button Grid.Row="0"
                     Grid.ColumnSpan="2"
                     Text="{Binding LoginTitle}"
-                    Command="{Binding OnLoginClicked}" />
-            <Button Grid.Row="1"
-                    Grid.ColumnSpan="2"
-                    Text="{Binding SettingTitle}"
-                    Command="{Binding OnSettingClicked}" />
-            <Button Grid.Row="2"
-                    Grid.ColumnSpan="2"
-                    Text="{Binding WorkoutTitle}"
-                    Command="{Binding OnWorkoutClicked}" />
+                    Command="{Binding OnLoginClicked}"
+                    VerticalOptions="End"
+                    BackgroundColor="Blue"
+                    TextColor="PapayaWhip"
+                    TextTransform="Uppercase"
+                    FontSize="30"
+                    HeightRequest="100"/>
+
 
         </Grid>
 
