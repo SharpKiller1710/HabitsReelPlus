@@ -43,7 +43,7 @@
                 BorderWidth="2"
                 BorderColor="Black"
                 BackgroundColor="Blue"
-                Command="{Binding OnLoginClicked}" />
+                Command="{Binding SignInClicked}" />
 
         <!-- Sets Margin Left, Top, Right, Bottom -->
         <Grid Margin="25, 35, 20, 20">
