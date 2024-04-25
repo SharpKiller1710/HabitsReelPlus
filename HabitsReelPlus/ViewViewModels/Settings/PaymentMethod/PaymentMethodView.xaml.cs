@@ -10,7 +10,7 @@ public partial class PaymentMethodView : ContentPage
         BindingContext = new PaymentMethodViewModel();
     }
 
-    public static string Text { get; private set; }
+    public static string Text { get; set; }
 
     private void OnSubmitClicked(object sender, EventArgs e)
     {
