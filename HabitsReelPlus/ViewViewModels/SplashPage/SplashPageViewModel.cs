@@ -6,12 +6,12 @@ namespace HabitsReelPlus.ViewViewModels.SplashPage
 {
     public class SplashPageViewModel : BaseViewModel
     {
-        public ICommand onSettingClicked { get; }
-        
+        public ICommand OnSettingsClicked { get; }
+
         public SplashPageViewModel() 
         {
             Title = "HabitsReel+";
-            onSettingClicked = new Command(settingsClickedAsync);
+            OnSettingsClicked = new Command(settingsClickedAsync);
 
         }
 

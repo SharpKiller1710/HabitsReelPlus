@@ -10,35 +10,41 @@
         </Style>
     </ContentPage.Resources>
 
-    <StackLayout>
+    <VerticalStackLayout>
 
-        <Grid Margin="25, 35, 20, 20">
+        <Button
+                WidthRequest="120"
+                HeightRequest="120" 
+                ImageSource="cog.png" 
+                HorizontalOptions="End"
+                CornerRadius="60"    
+                TextColor="Black"                      
+                Background="DarkBlue" Scale="0.65"
+                Command="{Binding OnSettingsClicked}"/>
 
-            <Grid.RowDefinitions>
-                <!-- Set Height to 50 DIPs (device-independent pixels) -->
-                <RowDefinition Height="75" />
-                <RowDefinition Height="75" />
-                <RowDefinition Height="75" />
-            </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <!-- Set Column to * which will proportionately space out the columns -->
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <Button
+               
+               WidthRequest="120"
+               HeightRequest="120"
+               Text="ACTIVITY"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="Red"
+               CornerRadius="60" TranslationX="-100"  
+                                 TranslationY="0" />
 
-            <Button Grid.Row="1"
-                    Grid.ColumnSpan="2"
-                    Text="Settings"
-                    Command="{Binding OnSettingClicked}" />
-            
-            <Button Grid.Row="2"
-                    Grid.ColumnSpan="2"
-                    Text="Workouts"
-                    Command="{Binding OnWorkoutClicked}" />
+        <Button    
+               
+               WidthRequest="120"
+               HeightRequest="120"
+               Text="ACTIVITY"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="Green"
+               CornerRadius="60" TranslationX="100"  
+                                 TranslationY="-135"/>
 
-        </Grid>
-        
-    </StackLayout>
-    
+    </VerticalStackLayout>
+
 </ContentPage>

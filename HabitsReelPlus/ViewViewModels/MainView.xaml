@@ -54,7 +54,7 @@
 
             <Button Grid.Row="2"
                     Grid.ColumnSpan="2"
-        Text="{Binding WorkoutTitle}"
+                    Text="{Binding WorkoutTitle}"
                     Command="{Binding OnWorkoutClicked}"
                     VerticalOptions="End"
                     BackgroundColor="Blue"
