@@ -74,6 +74,24 @@
 	  <MauiXaml Update="ViewViewModels\SplashPage\SplashPageView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Workout\DefaultWorkouts\Days\FridayView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Workout\DefaultWorkouts\Days\SaturdayView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Workout\DefaultWorkouts\Days\SundayView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Workout\DefaultWorkouts\Days\ThursdayView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Workout\DefaultWorkouts\Days\TuesdayView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Workout\DefaultWorkouts\Days\WednesdayView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\Workout\WorkoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

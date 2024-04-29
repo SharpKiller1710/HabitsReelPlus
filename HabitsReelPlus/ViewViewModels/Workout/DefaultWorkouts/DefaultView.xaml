@@ -20,6 +20,11 @@
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -32,6 +37,36 @@
             Grid.ColumnSpan="2"
             Text="{Binding MondayTitle}"
             Command="{Binding OnMondayClicked}" />
+
+            <Button Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Text="{Binding TuesdayTitle}"
+            Command="{Binding OnTuesdayClicked}" />
+
+            <Button Grid.Row="2"
+            Grid.ColumnSpan="2"
+            Text="{Binding WednesdayTitle}"
+            Command="{Binding OnWednesdayClicked}" />
+
+            <Button Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Text="{Binding ThursdayTitle}"
+            Command="{Binding OnThursdayClicked}" />
+
+            <Button Grid.Row="4"
+            Grid.ColumnSpan="2"
+            Text="{Binding FridayTitle}"
+            Command="{Binding OnFridayClicked}" />
+
+            <Button Grid.Row="5"
+            Grid.ColumnSpan="2"
+            Text="{Binding SaturdayTitle}"
+            Command="{Binding OnSaturdayClicked}" />
+
+            <Button Grid.Row="6"
+            Grid.ColumnSpan="2"
+            Text="{Binding SundayTitle}"
+            Command="{Binding OnSundayClicked}" />
 
         </Grid>
 

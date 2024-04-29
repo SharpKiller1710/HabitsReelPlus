@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace HabitsReelPlus.ViewViewModels.Workout.DefaultWorkouts.Days
 {
-    internal class MondayViewModel : BaseViewModel
+    internal class SaturdayViewModel : BaseViewModel
     {
-        public MondayViewModel()
+        public SaturdayViewModel()
         {
 
-            Title = TitleMonday.MondayTitle;
+            Title = TitleSaturday.SaturdayTitle;
         }
         public ImageSource GetImageSource
         {
@@ -21,9 +21,8 @@ namespace HabitsReelPlus.ViewViewModels.Workout.DefaultWorkouts.Days
 
             get
             {
-                return ImageSource.FromFile("upperbodyfront.png");
+                return ImageSource.FromFile("upperbody.jpg");
             }
         }
     }
-
 }

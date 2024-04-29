@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace HabitsReelPlus.Models
 {
-    internal class TitleMonday
+    class TitleFriday
     {
-        public static String MondayTitle { get; set; } = "Monday";
+        public static String FridayTitle { get; set; } = "Friday";
     }
 }

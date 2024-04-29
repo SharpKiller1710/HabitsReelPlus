@@ -4,7 +4,7 @@ public partial class WorkoutView : ContentPage
 {
 	public WorkoutView()
 	{
-		InitializeComponent();
+        InitializeComponent();
 		BindingContext = new WorkoutViewModel();
 	}
 }
