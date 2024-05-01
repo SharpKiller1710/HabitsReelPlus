@@ -9,8 +9,13 @@
             <Setter Property="Margin" Value="10" />
         </Style>
     </ContentPage.Resources>
+   
 
-    <VerticalStackLayout>
+        <VerticalStackLayout>
+        <Button Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Text="{Binding DefaultTitle}"
+                Command="{Binding OnDefaultClicked}" />
 
         <Button
                 WidthRequest="120"

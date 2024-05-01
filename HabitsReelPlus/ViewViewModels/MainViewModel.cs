@@ -11,11 +11,11 @@ namespace HabitsReelPlus.ViewViewModels
     {
         public string LoginTitle { get; } = TitleMain.LoginTitle;
         public string SettingTitle { get; } = TitleSettings.TitleSetting;
-        public string WorkoutTitle { get; } = TitleWorkout.WorkoutTitle;
+       
 
         public ICommand OnLoginClicked { get; set; }
         public ICommand OnSettingClicked { get; set; }
-        public ICommand OnWorkoutClicked { get; set; }
+        
 
         public ImageSource GetImageSource
         {
@@ -31,7 +31,7 @@ namespace HabitsReelPlus.ViewViewModels
 
             OnLoginClicked = new Command(OnLoginClickedAsync);
             OnSettingClicked = new Command(OnSettingClickedAsync);
-            OnWorkoutClicked = new Command(OnWorkoutClickedAsync);
+          
         }
 
         private async void OnLoginClickedAsync()
@@ -44,9 +44,6 @@ namespace HabitsReelPlus.ViewViewModels
             await Application.Current.MainPage.Navigation.PushAsync(new SettingsView());
         }
 
-        private async void OnWorkoutClickedAsync()
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new WorkoutView());
-        }
+
     }
 }

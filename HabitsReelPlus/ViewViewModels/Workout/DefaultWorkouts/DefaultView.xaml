@@ -35,37 +35,37 @@
 
             <Button Grid.Row="0"
             Grid.ColumnSpan="2"
-            Text="{Binding MondayTitle}"
+            Text="Monday"
             Command="{Binding OnMondayClicked}" />
 
             <Button Grid.Row="1"
             Grid.ColumnSpan="2"
-            Text="{Binding TuesdayTitle}"
+            Text="Tuesday"
             Command="{Binding OnTuesdayClicked}" />
 
             <Button Grid.Row="2"
             Grid.ColumnSpan="2"
-            Text="{Binding WednesdayTitle}"
+            Text="Wednesday"
             Command="{Binding OnWednesdayClicked}" />
 
             <Button Grid.Row="3"
             Grid.ColumnSpan="2"
-            Text="{Binding ThursdayTitle}"
+            Text="Thursday"
             Command="{Binding OnThursdayClicked}" />
 
             <Button Grid.Row="4"
             Grid.ColumnSpan="2"
-            Text="{Binding FridayTitle}"
+            Text="Friday"
             Command="{Binding OnFridayClicked}" />
 
             <Button Grid.Row="5"
             Grid.ColumnSpan="2"
-            Text="{Binding SaturdayTitle}"
+            Text="Saturday"
             Command="{Binding OnSaturdayClicked}" />
 
             <Button Grid.Row="6"
             Grid.ColumnSpan="2"
-            Text="{Binding SundayTitle}"
+            Text="Sunday"
             Command="{Binding OnSundayClicked}" />
 
         </Grid>

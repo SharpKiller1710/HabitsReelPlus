@@ -92,9 +92,6 @@
 	  <MauiXaml Update="ViewViewModels\Workout\DefaultWorkouts\Days\WednesdayView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ViewViewModels\Workout\WorkoutView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

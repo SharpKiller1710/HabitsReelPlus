@@ -52,16 +52,7 @@
                     FontSize="30"
                     HeightRequest="100"/>
 
-            <Button Grid.Row="2"
-                    Grid.ColumnSpan="2"
-                    Text="{Binding WorkoutTitle}"
-                    Command="{Binding OnWorkoutClicked}"
-                    VerticalOptions="End"
-                    BackgroundColor="Blue"
-                    TextColor="PapayaWhip"
-                    TextTransform="Uppercase"
-                    FontSize="30"
-                    HeightRequest="100"/>
+          
 
 
         </Grid>
