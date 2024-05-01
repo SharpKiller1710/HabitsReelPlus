@@ -3,14 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HabitsReelPlus.ViewViewModels.SplashPage.SplashPageView"
              Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
     <VerticalStackLayout>
-        <Button Grid.Row="1"
-                    Grid.ColumnSpan="2"
-                    Text="{Binding SettingTitle}"
-                    Command="{Binding OnSettingClicked}" />
-        <Button Grid.Row="2"
-                    Grid.ColumnSpan="2"
-                    Text="{Binding WorkoutTitle}"
-                    Command="{Binding OnWorkoutClicked}" />
+
+        <Button
+                WidthRequest="120"
+                HeightRequest="120" 
+                ImageSource="cog.png" 
+                HorizontalOptions="End"
+                CornerRadius="60"    
+                TextColor="Black"                      
+                Background="DarkBlue" Scale="0.65"
+                Command="{Binding OnSettingsClicked}"/>
+
+
+        <Button
+               
+               WidthRequest="120"
+               HeightRequest="120"
+               Text="ACTIVITY"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="Red"
+               CornerRadius="60" TranslationX="-100"  
+                                 TranslationY="0" />
+
+        <Button    
+               
+               WidthRequest="120"
+               HeightRequest="120"
+               Text="ACTIVITY"
+               FontSize="20"
+               TextColor="White"
+               BackgroundColor="Green"
+               CornerRadius="60" TranslationX="100"  
+                                 TranslationY="-135"/>
+
     </VerticalStackLayout>
+
 </ContentPage>
