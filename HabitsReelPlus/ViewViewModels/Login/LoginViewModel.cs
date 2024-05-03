@@ -15,7 +15,6 @@ namespace HabitsReelPlus.ViewViewModels.Login
         public ICommand LoginButtonClicked { get; }
         public ICommand SignUpClicked { get; }
         public ICommand SignInClicked { get; }
-        public ICommand OnLoginClicked { get; }
 
 
         private string _username = string.Empty;
@@ -33,7 +32,7 @@ namespace HabitsReelPlus.ViewViewModels.Login
             OnForgotClicked = new Command(forgetPasswordAsync);
             LoginButtonClicked = new Command(loginButtonClicked);
             SignUpClicked = new Command(signUpClicked);
-            SignInClicked = new Command(signInClicked);
+            SignInClicked = new Command(OnLoginClickedAsync);
         }
 
 
@@ -95,29 +94,28 @@ namespace HabitsReelPlus.ViewViewModels.Login
             await Application.Current.MainPage.Navigation.PushAsync(new SignUpView());
         }
 
-        public async void OnLoginClickedAsync(object sender, EventArgs e)
+        public async void OnLoginClickedAsync()
         {
-            
-            if (string.IsNullOrEmpty(Username))
+            if (Username == "YesMan")
             {
-                //Entry is empty, show an alert
-                Application.Current.MainPage.DisplayAlert(TitleMain.UsernameTitle, "Entry is empty. Please enter text.", "OK");
-            }
-
-            if (Username == "DieGuy")
-            {
-                if (Password == "DeadGuy1991")
+                if (Password == "HabitsTest")
                 {
                     await Application.Current.MainPage.Navigation.PushAsync(new SplashPageView());
+                } else
+                {
+                    await Application.Current.MainPage.DisplayAlert(TitleMain.UsernameTitle, "Invalid Password", "OK");
                 }
+            } else if (Username != null && Username != "YesMan")
+            {
+                await Application.Current.MainPage.DisplayAlert(TitleMain.UsernameTitle, "Invalid Username", "OK");
             }
 
         }
 
-        public async void signInClicked()
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new SplashPageView());
-        }
+        //public async void signInClicked()
+        //{
+        //    await Application.Current.MainPage.Navigation.PushAsync(new SplashPageView());
+        //}
 
     }
 }
