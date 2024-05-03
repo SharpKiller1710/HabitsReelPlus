@@ -21,7 +21,7 @@ namespace HabitsReelPlus.ViewViewModels.Workout.DefaultWorkouts.Days
 
             get
             {
-                return ImageSource.FromFile("upperbody.png");
+                return ImageSource.FromFile("upperbodythurs.png");
             }
         }
     }
