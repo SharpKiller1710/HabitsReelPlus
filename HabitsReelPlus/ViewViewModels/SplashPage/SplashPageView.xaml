@@ -9,13 +9,9 @@
             <Setter Property="Margin" Value="10" />
         </Style>
     </ContentPage.Resources>
-   
 
-        <VerticalStackLayout>
-        <Button Grid.Row="5"
-                Grid.ColumnSpan="2"
-                Text="{Binding DefaultTitle}"
-                Command="{Binding OnDefaultClicked}" />
+
+    <VerticalStackLayout>
 
         <Button
                 WidthRequest="120"
@@ -49,6 +45,22 @@
                BackgroundColor="Green"
                CornerRadius="60" TranslationX="100"  
                                  TranslationY="-135"/>
+
+        <Grid Margin="25, 35, 20, 20">
+
+        <Grid.RowDefinitions>
+            <!-- Set Height to 50 DIPs (device-independent pixels) -->
+            <RowDefinition Height="75" />
+            <RowDefinition Height="75" />
+        </Grid.RowDefinitions>
+
+        <Button
+            Grid.RowSpan="2"
+            FontSize="30"
+            Text="Default Workouts"
+            Command="{Binding OnDefaultClicked}"/>
+        
+        </Grid>
 
     </VerticalStackLayout>
 
